@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR" xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" type="image/png" th:href="@{/assets/miscellaneous/favicon.png}">
+	<link rel="stylesheet" th:href="@{/styles/style.css}" >
+
+	<meta name="description" content="Website para listar e cadastrar alunos.">
+
+	<title>Atividade de LP4 - Pokemons</title>
+
+</head>
+
+<body>
+	<header id="page-header">
+		
+		<h1 th:if="${pokemons.empty}">Nenhum pokemon cadastrado</h1>
+		<h1 th:if="${not pokemons.empty}" th:text="${#lists.size(pokemons)} + 'pokemons cadastrados'"></h1>
+
+		<a href="/add">
+			<button id="register-student-redirect">
+				<p>Cadastrar pokemon</p>
+				<img th:src="@{/assets/icons/person-add.svg}">
+			</button>
+		</a>
+	</header>
+	
+	<section id="students">
+		<div class="student-card" th:each="pokemon : ${pokemons}">
+			<div class="profile-pic">
+				<img th:src="${pokemon.imageSrc}" alt="Foto de perfil">
+			</div>
+			<header class="card-header"></header>
+			<div class="dados">
+				<h2 th:text="${pokemon.name}" ></h2>
+				<div class="student-info">
+					<span>
+						<img class="icon" src="public/assets/icons/book.svg" alt="">
+						<p><strong>Tipo:</strong><span th:text="${pokemon.type}"></span></p>
+					</span>
+					<span>
+						<img class="icon" src="public/assets/icons/school.svg" alt="">
+						<p><strong>Fraqueza:</strong> <span th:text="${pokemon.weakness}"> </p>
+					</span>
+					<span>
+						<img class="icon" src="public/assets/icons/calendar.svg" alt="">
+						<p><strong>Nascimento:</strong> <span th:text="${pokemon.birthdate}"> </p>
+					</span>
+					<span>
+						<img class="icon" src="public/assets/icons/mail.svg" alt="">
+						<p><strong>Dono:</strong> <span th:text="${pokemon.owner}"> </p>
+					</span>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<!--
+	 <a href="/adicionar">Novo usuário</a><br/>
+	<table class="table table-striped">
+	    <thead>
+	        <tr>
+	            <th> Nome </th>
+	            <th> CPF </th>
+	            <th> Nascimento </th>
+	            <th> E-mail </th>
+	            <th> Pontos </th>            
+	        </tr>
+	    </thead>
+	    	<tbody>
+				<tr th:if="${usuarios.empty}">
+		            <td colspan="2"> Sem usuários </td>
+		        </tr>
+		        <tr th:each="usuario : ${usuarios}">
+		            <td><span th:text="${usuario.nome}"> Nome </span></td>
+		            <td><span th:text="${usuario.cpf}"> Cpf </span></td>
+		            <td><span th:text="${usuario.dataNascimento}"> Nascimento </span></td>
+		            <td><span th:text="${usuario.email}"> E-mail </span></td>
+		            <td><span th:text="${usuario.pontos}"> Pontos </span></td>
+		        </tr>
+			</tbody>
+	</table>
+	 
+	 -->
+		
+</body>
+</html>
