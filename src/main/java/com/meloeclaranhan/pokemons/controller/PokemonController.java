@@ -30,14 +30,14 @@ public class PokemonController {
 	public String listPokemonsRoute(Model model) {
 		List<Pokemon> pokes = pokemonRepository.findAll();
 		model.addAttribute("pokemons", pokes);
-		return "listPokemons";
+		return "list-pokemons";
 	}
 	
 	@GetMapping("/add")
 	public String addPokemonRoute(Model model) {
 		Pokemon poke = new Pokemon();
 		model.addAttribute("pokemon", poke);
-		return "formPokemon";
+		return "form-pokemon";
 	}
 	
 	@PostMapping("/save")
