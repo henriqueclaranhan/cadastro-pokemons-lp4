@@ -38,6 +38,8 @@ public class Pokemon {
 	@NotNull
 	@Size(min = 3, message = "O nome do dono do pokémon deve ter no mínimo 3 carateres!")
 	private String pokemonOwnerName;
+
+	private String imageSrc;
 	
 	public Pokemon() {}
 	
