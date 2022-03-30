@@ -43,7 +43,7 @@ public class PokemonController {
 	@PostMapping("/save")
 	public String savePokemonRoute(@Valid Pokemon poke, BindingResult result) {
 		if(result.hasErrors()) {
-			return "formPokemon";
+			return "form-pokemon";
 		}
 		pokemonRepository.save(poke);
 		return "redirect:/list";
