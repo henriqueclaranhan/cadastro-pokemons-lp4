@@ -1,24 +1,22 @@
 <!doctype html>
 <html lang="pt-BR" xmlns:th="https://www.thymeleaf.org">
 <head>
-	<meta charset="UTF-8">
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="icon" type="image/png" th:href="@{/assets/miscellaneous/favicon.png}">
+	
 	<link rel="stylesheet" th:href="@{/styles/style.css}" >
-
-	<meta name="description" content="Website para listar e cadastrar alunos.">
-
-	<title>Atividade de LP4 - Pokemons</title>
+	<title>Atividade de LP4 - Pokémons</title>
 
 </head>
 
 <body>
 	<header id="page-header">
 		
-		<h1 th:if="${pokemons.empty}">Nenhum pokemon cadastrado</h1>
-		<h1 th:if="${not pokemons.empty}" th:text="${#lists.size(pokemons)} + 'pokemons cadastrados'"></h1>
+		<h1 th:if="${pokemons.empty}">Nenhum pokémon cadastrado</h1>
+		<h1 th:if="${not pokemons.empty}" th:text="${#lists.size(pokemons)} + ' pokemons cadastrados'"></h1>
 
 		<a href="/add">
 			<button id="register-student-redirect">
@@ -47,11 +45,11 @@
 					</span>
 					<span>
 						<img class="icon" src="public/assets/icons/calendar.svg" alt="">
-						<p><strong>Nascimento:</strong> <span th:text="${pokemon.birthdate}"> </p>
+						<p><strong>Nascimento:</strong> <span th:text="${pokemon.birthday}"> </p>
 					</span>
 					<span>
 						<img class="icon" src="public/assets/icons/mail.svg" alt="">
-						<p><strong>Dono:</strong> <span th:text="${pokemon.owner}"> </p>
+						<p><strong>Dono:</strong> <span th:text="${pokemon.pokemonOwnerName}"> </p>
 					</span>
 				</div>
 			</div>
