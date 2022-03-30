@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="icon" type="image/png" th:href="@{/assets/miscellaneous/favicon.png}">
-	
+
 	<link rel="stylesheet" th:href="@{/styles/style.css}" >
 	<title>Atividade de LP4 - Pokémons</title>
 
@@ -56,34 +56,5 @@
 		</div>
 
 	</section>
-
-	<!--
-	 <a href="/adicionar">Novo usuário</a><br/>
-	<table class="table table-striped">
-	    <thead>
-	        <tr>
-	            <th> Nome </th>
-	            <th> CPF </th>
-	            <th> Nascimento </th>
-	            <th> E-mail </th>
-	            <th> Pontos </th>            
-	        </tr>
-	    </thead>
-	    	<tbody>
-				<tr th:if="${usuarios.empty}">
-		            <td colspan="2"> Sem usuários </td>
-		        </tr>
-		        <tr th:each="usuario : ${usuarios}">
-		            <td><span th:text="${usuario.nome}"> Nome </span></td>
-		            <td><span th:text="${usuario.cpf}"> Cpf </span></td>
-		            <td><span th:text="${usuario.dataNascimento}"> Nascimento </span></td>
-		            <td><span th:text="${usuario.email}"> E-mail </span></td>
-		            <td><span th:text="${usuario.pontos}"> Pontos </span></td>
-		        </tr>
-			</tbody>
-	</table>
-	 
-	 -->
-		
 </body>
 </html>

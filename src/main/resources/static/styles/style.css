@@ -27,7 +27,6 @@ body {
     height: 100%;
     display: flex;
     background-color: #F3F3F3;
-    /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
 }
 
 button {
