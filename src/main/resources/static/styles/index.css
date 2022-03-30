@@ -1,0 +1,119 @@
+body {
+	padding: 4rem 0 0 9rem;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+header {
+	width: 100%;
+}
+
+content {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 45%;
+	height: 80%;
+}
+
+#pokemon-logo {
+	width: 11rem;
+}
+
+h1 {
+	font-size: 2.8rem;
+}
+
+h2 {
+	font-size: 2.2rem;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+p {
+	font-size: 1.4rem;
+}
+
+#redirect-buttons-group {
+	width: 100%;
+	margin-top: 2.5rem;
+	display: flex;
+	flex-direction: row;
+	column-gap: 40px;
+}
+
+.redirect-button {
+	width: 10rem;
+	height: 3.6rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.button-top, .button-bottom {
+	--button-radius: 4px;
+	width: 100%;
+	border: 2px solid #000000;
+	transition: all 0.5s ease-out;
+}
+.button-top {
+	height: 40%;
+	border-top-left-radius: var(--button-radius);
+	border-top-right-radius: var(--button-radius);
+}
+.button-bottom {
+	height: 60%;
+	display: grid;
+	place-items: center;
+	background-color: #FFFFFF;
+	border-bottom-left-radius: var(--button-radius);
+	border-bottom-right-radius: var(--button-radius);
+}
+
+.button-text {
+	position: absolute;
+	font-family: "Press Start 2P", sans-serif;
+	font-size: 1rem;
+}
+
+#list-button .button-top {
+	background-color: var(--red);
+}
+
+#add-button .button-top {
+	background-color: var(--gray);
+	padding: 0 8px;
+}
+
+#add-button-decoration {
+	width: 100%;
+	height: 100%;
+	border: 7px solid var(--yellow);
+	border-bottom: none;
+}
+
+.redirect-button:hover .button-top {
+	margin-top: -3px;
+}
+
+figure {
+	width: 55%;
+	height: 100%;
+	padding: 2rem 0;
+	border-top-left-radius: 16px;
+	display: grid;
+	place-items: center;
+	background-color: #FBAB7E;
+	background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}
+
+#pikachu-img {
+	width:  70%;
+}
