@@ -99,4 +99,12 @@ public class Pokemon {
 	public void setPokemonOwnerName(String pokemonOwnerName) {
 		this.pokemonOwnerName = pokemonOwnerName;
 	}
+
+	public String getImageSrc() {
+		return imageSrc;
+	}
+
+	public void setImageSrc(String imageSrc) {
+		this.imageSrc = imageSrc;
+	}
 }
