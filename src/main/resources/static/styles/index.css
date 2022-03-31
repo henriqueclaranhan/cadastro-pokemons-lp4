@@ -55,6 +55,7 @@ p {
 	height: 3.6rem;
 	display: flex;
 	flex-direction: column;
+	outline: none;
 }
 
 .button-top, .button-bottom {
