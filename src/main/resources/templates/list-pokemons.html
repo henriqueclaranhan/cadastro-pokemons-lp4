@@ -8,6 +8,7 @@
 	<link rel="icon" type="image/png" th:href="@{/assets/miscellaneous/favicon.png}">
 
 	<link rel="stylesheet" th:href="@{/styles/style.css}" >
+	<link rel="stylesheet" th:href="@{/styles/list-pokemons.css}" >
 	<title>Atividade de LP4 - Pokémons</title>
 
 </head>
@@ -16,40 +17,45 @@
 	<header id="page-header">
 		
 		<h1 th:if="${pokemons.empty}">Nenhum pokémon cadastrado</h1>
-		<h1 th:if="${not pokemons.empty}" th:text="${#lists.size(pokemons)} + ' pokemons cadastrados'"></h1>
+		<h1 th:if="${not pokemons.empty and #lists.size(pokemons) eq 1}" th:text="${#lists.size(pokemons)} + ' pokémon cadastrado'"></h1>
+		<h1 th:if="${not pokemons.empty and #lists.size(pokemons) gt 1}" th:text="${#lists.size(pokemons)} + ' pokémons cadastrados'"></h1>
 
 		<a href="/add">
-			<button id="register-student-redirect">
-				<p>Cadastrar pokemon</p>
-				<img th:src="@{/assets/icons/person-add.svg}">
-			</button>
+			<a href="/add">
+				<button id="add-button" class="redirect-button">
+					<div class="button-top">
+						<div id="add-button-decoration"></div>
+					</div>
+					<div class="button-bottom"><p class="button-text">Adicionar</p></div>
+				</button>
+			</a>
 		</a>
 	</header>
 	
-	<section id="students">
-		<div class="student-card" th:each="pokemon : ${pokemons}">
+	<section id="pokemons-list">
+		<div class="pokemon-card" th:each="pokemon : ${pokemons}">
 			<div class="profile-pic">
 				<img th:src="${pokemon.imageSrc}" alt="Foto de perfil">
 			</div>
 			<header class="card-header"></header>
-			<div class="dados">
+			<div class="data-container">
 				<h2 th:text="${pokemon.name}" ></h2>
-				<div class="student-info">
+				<div class="pokemon-info">
 					<span>
-						<img class="icon" src="public/assets/icons/book.svg" alt="">
-						<p><strong>Tipo:</strong><span th:text="${pokemon.type}"></span></p>
+						<p class="info-title"><strong>Tipo:</strong></p>
+						<p class="info-text" th:text="${pokemon.type}" />
 					</span>
 					<span>
-						<img class="icon" src="public/assets/icons/school.svg" alt="">
-						<p><strong>Fraqueza:</strong> <span th:text="${pokemon.weakness}"> </p>
+						<p class="info-title"><strong>Fraqueza:</strong></p>
+						<p class="info-text" th:text="${pokemon.weakness}" />
 					</span>
 					<span>
-						<img class="icon" src="public/assets/icons/calendar.svg" alt="">
-						<p><strong>Nascimento:</strong> <span th:text="${pokemon.birthday}"> </p>
+						<p class="info-title"><strong>Nascimento:</strong></p>
+						<p class="info-text" th:text="${pokemon.birthday}"/> 
 					</span>
 					<span>
-						<img class="icon" src="public/assets/icons/mail.svg" alt="">
-						<p><strong>Dono:</strong> <span th:text="${pokemon.pokemonOwnerName}"> </p>
+						<p class="info-title"><strong>Dono:</strong></p>
+						<p class="info-text" th:text="${pokemon.pokemonOwnerName}"/> 
 					</span>
 				</div>
 			</div>

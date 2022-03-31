@@ -1,28 +1,116 @@
-#student-data{
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+#page-header {
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#pokemons-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 45px 3rem 6rem 3rem;
+    padding: 45px 3rem 2rem 3rem;
 }
 
-#student-data .student-container {
-	width: 100%;
-	margin-top: 20px;
+.pokemon-card {
+    min-width: 260px;
+    width: 26%;
+    margin: 20px;
 
     border-radius: 5px;
-    border: 1px solid var(--blue);
-    backdrop-filter: blur(4px);
+    border: 3px solid #000000;
 
-    transition: 0.4s;
-
-    /*display: flex;*/
-    /*flex-direction: column;*/
+    display: flex;
+    flex-direction: column;
 
     background-color: #f4f7fa;
     filter: drop-shadow(0 5px 10px #5050502c);
 }
 
-#student-data .profile-pic{
-	margin: 2rem;
+.card-header {
+    border-radius: 4px 4px 0 0;
+    height: 90px;
+    width: 100%;
+    border-bottom: 2px solid #000000;
+    background-color: var(--red);
+}
+
+.profile-pic {
+	--picture-size: 90px;
+    position: absolute;
+    align-self: center;
+    margin-top: 26px;
+    width: var(--picture-size);
+    height: var(--picture-size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: 1px solid #000000;
+    background-color: #000000;
+}
+
+.profile-pic img {
+	max-height: 90px;
+}
+
+.data-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 41px;
+}
+
+.data-container h2 {
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 400;
+    font-family: "Press Start 2P", sans-serif;
+}
+
+.pokemon-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    padding: 22px;
+}
+
+.pokemon-info span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   	column-gap: 8px;
+}
+
+.info-title {
+	font-size: 18px;
+}
+
+.info-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+    font-size: 17px;
+}
+
+@media (min-width: 960px) {
+    #page-header {
+        padding: 4.7rem 8% 0.8rem 8%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
 }
