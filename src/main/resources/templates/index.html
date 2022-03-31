@@ -2,12 +2,12 @@
 <html lang="pt-br" xmlns:th="https://www.thymeleaf.org">
 <head>
 	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<link rel="icon" type="image/png" th:href="@{/assets/miscellaneous/favicon.png}">
 	<meta name="description" content="Plataforma para listar e cadastrar pokémons.">
-	
+
 	<link rel="stylesheet" th:href="@{/styles/style.css}" >
 	<link rel="stylesheet" th:href="@{/styles/index.css}" >
 	<title>Atividade de LP4 - Pokémons</title>
@@ -18,32 +18,36 @@
 	</header>
 	<content>
 		<main>
-		<h1>Cadastro de Pokémons</h1>
-		<p>Plataforma para listar e cadastrar pokémons.</p>
-		<h2>Alunos: </h2> 
-		<p>Êxodo Jaffar Marques de Melo</p>
-		<p>Henrique  Claranhan</p>
-		
-		<div id="redirect-buttons-group">
-			<a href="/list">
-				<button id="list-button" class="redirect-button">
-					<div class="button-top"></div>
-					<div class="button-bottom"><p class="button-text">Listar</p></div>
-				</button>
-			</a>
-			<a href="/add">
-				<button id="add-button" class="redirect-button">
-					<div class="button-top">
-						<div id="add-button-decoration"></div>
-					</div>
-					<div class="button-bottom"><p class="button-text">Adicionar</p></div>
-				</button>
-			</a>
-		</div>
-	</main>
-	<figure>
-		<img id="pikachu-img" alt="Pikachu" th:src="@{/assets/images/pikachu.png}">
-	</figure>
+			<h1>Cadastro de Pokémons</h1>
+			<p>Plataforma para listar e cadastrar pokémons.</p>
+			<h2>Alunos: </h2> 
+			<p>Êxodo Jaffar Marques de Melo</p>
+			<p>Henrique  Claranhan</p>
+
+			<div id="redirect-buttons-group">
+				<a href="/list">
+					<button id="list-button" class="redirect-button">
+						<div class="button-top"></div>
+						<div class="button-bottom">
+							<p class="button-text">Listar</p>
+						</div>
+					</button>
+				</a>
+				<a href="/add">
+					<button id="add-button" class="redirect-button">
+						<div class="button-top">
+							<div id="add-button-decoration"></div>
+						</div>
+						<div class="button-bottom">
+							<p class="button-text">Adicionar</p>
+						</div>
+					</button>
+				</a>
+			</div>
+		</main>
+		<figure>
+			<img id="pikachu-img" alt="Pikachu" th:src="@{/assets/images/pikachu.png}">
+		</figure>
 	</content>
 </body>
 </html>
