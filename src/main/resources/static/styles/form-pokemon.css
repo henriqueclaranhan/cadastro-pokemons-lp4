@@ -13,7 +13,7 @@ section {
     align-self: center;
     background-color: #fff;
     border-radius: 5px;
-    border: 1px solid var(--red);
+    border: 2px solid #000000;
     filter: drop-shadow(15px 20px 20px #dc5b5b50);
     width: 400px;
     padding: 1.3rem;
@@ -75,7 +75,7 @@ form div:not(:last-child){
 
 hr {
     border: none;
-    border-top: 1px solid var(--red);
+    border-top: 1px solid #000000;
     align-self: center;
     width: 97%;
     margin-top: -3px;
