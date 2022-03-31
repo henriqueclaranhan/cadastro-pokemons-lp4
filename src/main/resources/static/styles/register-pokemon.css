@@ -13,9 +13,9 @@ section {
     align-self: center;
     background-color: #fff;
     border-radius: 5px;
-    border: 1px solid #2a88bb;
-    filter: drop-shadow(15px 20px 20px #5bafdc50);
-    width: 300px;
+    border: 1px solid var(--red);
+    filter: drop-shadow(15px 20px 20px #dc5b5b50);
+    width: 400px;
     padding: 1.3rem;
 }
 
@@ -45,7 +45,7 @@ form {
     height: 40px;
     padding-left: 8px;
     font-size: 0.9rem;
-    border: 1px solid #2a88bb;
+    border: 1px solid var(--red);
     border-radius: 3px;   
 }
 
@@ -61,9 +61,9 @@ form div:not(:last-child){
 
 .input-field input:focus, .input-field textarea:focus {
     transition: 0.15s;
-    box-shadow: 0 0 4px #2a88bb;
+    box-shadow: 0 0 4px var(--red);
     outline-offset: 2px;
-    outline-color: #2a88bb;
+    outline-color: var(--red);
 }
 
 ::placeholder { 
@@ -75,7 +75,7 @@ form div:not(:last-child){
 
 hr {
     border: none;
-    border-top: 1px solid #2a88bb;
+    border-top: 1px solid var(--red);
     align-self: center;
     width: 97%;
     margin-top: -3px;
@@ -88,20 +88,31 @@ hr {
     font-size: 1rem;
     font-weight: 700;
     border-radius: 3px;
-    outline: none;
-    background-color: #2a88bb;
+    background-color: var(--red);
     color: white;
     border: none;
 }
 
 #submit-button:active {
     transition: 0.15s ease;
-    background-color: #0d5a83;
+    opacity: 80%;
     color: rgb(194, 194, 194);
+}
+
+@media (min-width: 460px) {
+    #form-box {
+        width: 80%;
+    }
+}
+
+@media (min-width: 660px) {
+    #form-box {
+        width: 70%;
+    }
 }
 
 @media (min-width: 960px) {
     #form-box {
-        width: 400px;
+        width: 450px;
     }
 }
