@@ -4,7 +4,7 @@ body {
 }
 
 #page-header {
-    padding-top: 4rem;
+    padding-top: 5rem;
     display: flex;
     flex-direction: column;
     row-gap: 18px;
