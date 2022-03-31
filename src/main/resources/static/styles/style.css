@@ -1,6 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap');
+@font-face {
+	font-family: "Rubik";
+	src: url("../assets/fonts/Rubik.ttf");
+}
+
+@font-face {
+	font-family: "Press Start 2P";
+	src: url("../assets/fonts/PressStart2P.ttf");
+}
 
 :root {
     --red: #EE4035;
@@ -13,7 +19,7 @@
     padding: 0;
     border: none;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik";
 }
 
 html {
