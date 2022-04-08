@@ -37,13 +37,13 @@ public class PokemonController {
 	public String addPokemonRoute(Model model) {
 		Pokemon poke = new Pokemon();
 		model.addAttribute("pokemon", poke);
-		return "form-pokemon";
+		return "add-pokemon";
 	}
 	
 	@PostMapping("/save")
 	public String savePokemonRoute(@Valid Pokemon poke, BindingResult result) {
 		if(result.hasErrors()) {
-			return "form-pokemon";
+			return "add-pokemon";
 		}
 		pokemonRepository.save(poke);
 		return "redirect:/list";
