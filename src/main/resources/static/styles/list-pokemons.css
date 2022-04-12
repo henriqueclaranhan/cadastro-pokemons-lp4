@@ -13,6 +13,10 @@ body {
     justify-content: center;
 }
 
+h1 {
+    padding: 0 20px;
+}
+
 #pokemons-list {
     display: flex;
     flex-direction: row;
@@ -32,7 +36,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    background-color: #f4f7fa;
+    background-color: #f2f2f2;
     filter: drop-shadow(0 5px 10px #5050502c);
 }
 
@@ -72,7 +76,7 @@ body {
 
 .data-container h2 {
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.4rem;
     font-weight: 400;
     font-family: "Press Start 2P", sans-serif;
 }
@@ -111,6 +115,25 @@ body {
     }
     
     h1 {
-        font-size: 40px;
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 417px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .redirect-button {
+		width: 9rem;
+		height: 3.6rem;
+	}
+
+	.button-text {
+		font-size: .75rem;
+	}
+
+    .data-container h2 {
+        font-size: 1.2rem;
     }
 }

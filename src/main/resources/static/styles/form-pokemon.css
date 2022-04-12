@@ -99,20 +99,33 @@ hr {
     color: rgb(194, 194, 194);
 }
 
-@media (min-width: 460px) {
-    #form-box {
-        width: 80%;
+@media (max-width: 660px) {
+    body {
+        background-color: #FFFFFF;
     }
-}
 
-@media (min-width: 660px) {
     #form-box {
-        width: 70%;
+        width: 85%;
+        background-color: transparent;
+        border: none;
+        filter: unset;
     }
 }
 
 @media (min-width: 960px) {
     #form-box {
         width: 450px;
+    }
+}
+
+@media (max-height: 685px) {
+    #form-title {
+        padding-top: 1rem;
+        font-size: 1.7rem;
+        margin-bottom: .8rem;
+    }
+
+    .input-field input {
+        height: 34px;
     }
 }

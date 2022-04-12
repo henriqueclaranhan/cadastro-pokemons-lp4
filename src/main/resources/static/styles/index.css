@@ -22,6 +22,7 @@ main {
 	justify-content: center;
 	width: 45%;
 	height: 80%;
+	padding-right: 20px;
 }
 
 #pokemon-logo {
@@ -67,4 +68,59 @@ figure {
 
 #pikachu-img {
 	width:  70%;
+}
+
+@media (max-width: 1024px) {
+	body {
+		padding: 4rem 0 0 4rem;
+	}
+
+	main {
+		width: 55%;
+	}
+
+	figure {
+		width: 45%;
+	}
+}
+
+@media (max-width: 667px) {
+	h1 {
+		font-size: 2.4rem;
+		line-height: 2.5rem;
+	}
+
+	h2 {
+		font-size: 1.8rem;
+	}
+}
+
+@media (max-width: 630px) {
+	body {
+		padding: 4rem;
+	}
+
+	#pokemon-logo {
+		position: relative;
+		width: 11rem;
+	}
+
+	content {
+		display: grid;
+		padding-top: 20px;
+	}
+
+	main {
+		width: 100%;
+		padding: 0;
+	}
+
+	figure {
+		display: none;
+	}
+
+	#redirect-buttons-group {
+		column-gap: 30px;
+		justify-content: center;
+	}
 }

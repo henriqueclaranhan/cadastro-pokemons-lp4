@@ -53,6 +53,7 @@ h1 {
     position: absolute;
     top: 20px;
     left: 25px;
+	background-color: #FFFFFF;
 	border: 1px solid #000000;
 	border-radius: 4px;
 	padding: 4px 8px;
@@ -113,4 +114,26 @@ h1 {
 	height: 100%;
 	border: 7px solid var(--yellow);
 	border-bottom: none;
+}
+
+@media (max-width: 768px) {
+	.redirect-button {
+		width: 8rem;
+		height: 3.6rem;
+	}
+
+	.button-text {
+		font-size: .75rem;
+	}
+}
+
+@media (max-width: 630px) {
+	.redirect-button {
+		width: 7rem;
+		height: 3.5rem;
+	}
+
+	.button-text {
+		font-size: .6rem;
+	}
 }
