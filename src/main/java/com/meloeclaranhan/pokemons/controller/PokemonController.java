@@ -50,7 +50,7 @@ public class PokemonController {
 
 		model.addAttribute("pokemons", pokemons);
 
-		return "/auth/admin/list-pokemons";
+		return "auth/admin/list-pokemons";
 	}
 
 	@GetMapping("/edit/{id}")
@@ -64,14 +64,14 @@ public class PokemonController {
 		Pokemon pokemon = currentPokemon.get();
 		model.addAttribute("pokemon", pokemon);
 
-		return "/auth/user/edit-pokemon";
+		return "auth/user/edit-pokemon";
 	}
 
 	@PostMapping("/edit/{id}")
 	public String editPokemon(@PathVariable("id") long id, @Valid Pokemon pokemon, BindingResult result) {
 		if (result.hasErrors()) {
 			pokemon.setId(id);
-			return "/auth/user/edit-pokemon";
+			return "auth/user/edit-pokemon";
 		}
 
 		pokemonRepository.save(pokemon);
