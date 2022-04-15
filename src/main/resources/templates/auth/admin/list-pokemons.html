@@ -81,7 +81,7 @@
 					</span>
 					<span>
 						<p class="info-title"><strong>Nascimento:</strong></p>
-						<p class="info-text" th:text="${pokemon.birthday}"/> 
+						<p class="info-text" th:text="${#dates.format(pokemon.birthday, 'dd/MM/yyyy')}"/> 
 					</span>
 					<span>
 						<p class="info-title"><strong>Dono:</strong></p>
