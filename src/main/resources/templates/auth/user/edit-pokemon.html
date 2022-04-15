@@ -13,10 +13,10 @@
 </head>
 
 <body>
-	<div th:insert="fragments/back-button :: back-button"></div>
+	<a href="/pokemon/admin/list" th:insert="fragments/back-button :: back-button"></a>
 	<section>
 		<div id="form-box">
-			<h1 id="form-title">Editar pokémon</h1>
+			<h1 id="form-title" th:text="'Editar pokémon ' + ${pokemon.name}"></h1>
 			<form action="#" th:action="@{/pokemon/edit/{id}(id=${pokemon.id})}" th:object="${pokemon}" method="post">
 				<div class="input-field">
 					<p>Nome</p>
