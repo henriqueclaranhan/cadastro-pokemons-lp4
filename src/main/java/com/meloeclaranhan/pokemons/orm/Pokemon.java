@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -25,11 +26,14 @@ public class Pokemon {
 	private String name;
 	
 	@NotNull
+	@NotEmpty(message = "O tipo deve ser informado!")
 	private String type;
 
 	@NotNull
+	@NotEmpty(message = "A fraqueza deve ser informada!")
 	private String weakness;
 	
+	@NotNull
 	@Basic
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
