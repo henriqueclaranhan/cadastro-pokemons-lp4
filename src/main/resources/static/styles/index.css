@@ -70,6 +70,10 @@ figure {
 	width:  70%;
 }
 
+footer {
+	display: none;
+}
+
 @media (max-width: 1024px) {
 	body {
 		padding: 4rem 0 0 4rem;
@@ -97,22 +101,28 @@ figure {
 
 @media (max-width: 630px) {
 	body {
-		padding: 4rem;
+		padding: 0;
+		padding-top: 4rem;
+	}
+
+	header {
+		display: flex;
 	}
 
 	#pokemon-logo {
 		position: relative;
-		width: 11rem;
+		margin: auto;
+		width: 216px;
 	}
 
 	content {
-		display: grid;
 		padding-top: 20px;
 	}
 
 	main {
 		width: 100%;
 		padding: 0;
+		padding: 0 4rem;
 	}
 
 	figure {
@@ -122,5 +132,12 @@ figure {
 	#redirect-buttons-group {
 		column-gap: 30px;
 		justify-content: center;
+	}
+
+	footer {
+		display: initial;
+		margin-bottom: -5px;
+		color: #FFD12C;
+		filter: drop-shadow(0 -5px #0F4F90);
 	}
 }
