@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR" xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" type="image/png" th:href="@{/assets/miscellaneous/favicon.png}">
+	<link rel="stylesheet" th:href="@{/styles/style.css}" >
+	<link rel="stylesheet" th:href="@{/styles/form-pokemon.css}">
+
+	<title>Atividade de LP4 - Pokémons</title>
+</head>
+
+<body>
+	<div th:insert="fragments/back-button :: back-button"></div>
+	<section>
+		<div id="form-box">
+			<h1 id="form-title">Editar pokémon</h1>
+			<form action="#" th:action="@{/pokemon/edit/{id}(id=${pokemon.id})}" th:object="${pokemon}" method="post">
+				<div class="input-field">
+					<p>Nome</p>
+					<input type="text" placeholder="Pikachu" maxlength="100" required th:field="*{name}">
+					<span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span><br />
+				</div>
+				<div class="input-field">
+					<p>Tipo</p>
+					<input type="text" placeholder="Aquático" maxlength="100" required th:field="*{type}">
+					<span th:if="${#fields.hasErrors('type')}" th:errors="*{type}"></span><br />
+				</div>
+				<div class="input-field">
+					<p>Fraqueza</p>
+					<input type="text" placeholder="Terra" maxlength="100" required th:field="*{weakness}">
+					<span th:if="${#fields.hasErrors('weakness')}" th:errors="*{weakness}"></span><br />
+				</div>
+				<div class="input-field">
+					<p>Data de nascimento</p>
+					<input type="text" placeholder="11/09/2001"  required th:field="*{birthday}">
+					<span th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}"></span><br />
+				</div>
+				<div class="input-field">
+					<p>Dono do pokémon</p>
+					<input type="text" placeholder="Freedom" maxlength="100" required th:field="*{pokemonOwnerName}">
+					<span th:if="${#fields.hasErrors('birthday')}" th:errors="*{pokemonOwnerName}"></span><br />
+				</div>
+				<div class="input-field">
+					<p>URL para imagem</p>
+					<input type="url" placeholder="https://www.site.com/image.png" maxlength="100"  th:field="*{imageSrc}">
+					<span th:if="${#fields.hasErrors('birthday')}" th:errors="*{imageSrc}"></span><br />
+				</div>
+				<hr>
+				<input id="submit-button" type="submit" name="submit" value="Salvar Alterações">
+			</form>
+		</div>
+	</section>
+</body>
+</html>
