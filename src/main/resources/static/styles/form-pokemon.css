@@ -73,6 +73,11 @@ form div:not(:last-child){
     font-size: 15px;
 }
 
+.error-message {
+    font-size: .9rem;
+    color: #ff0000;
+}
+
 hr {
     border: none;
     border-top: 1px solid #000000;

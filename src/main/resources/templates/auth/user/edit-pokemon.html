@@ -21,32 +21,32 @@
 				<div class="input-field">
 					<p>Nome</p>
 					<input type="text" placeholder="Pikachu" maxlength="100" required th:field="*{name}">
-					<span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span><br />
+					<span class="error-message" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span><br />
 				</div>
 				<div class="input-field">
 					<p>Tipo</p>
 					<input type="text" placeholder="Aquático" maxlength="100" required th:field="*{type}">
-					<span th:if="${#fields.hasErrors('type')}" th:errors="*{type}"></span><br />
+					<span class="error-message" th:if="${#fields.hasErrors('type')}" th:errors="*{type}"></span><br />
 				</div>
 				<div class="input-field">
 					<p>Fraqueza</p>
 					<input type="text" placeholder="Terra" maxlength="100" required th:field="*{weakness}">
-					<span th:if="${#fields.hasErrors('weakness')}" th:errors="*{weakness}"></span><br />
+					<span class="error-message" th:if="${#fields.hasErrors('weakness')}" th:errors="*{weakness}"></span><br />
 				</div>
 				<div class="input-field">
 					<p>Data de nascimento</p>
 					<input type="text" placeholder="11/09/2001"  required th:field="*{birthday}">
-					<span th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}"></span><br />
+					<span class="error-message" th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}"></span><br />
 				</div>
 				<div class="input-field">
 					<p>Dono do pokémon</p>
 					<input type="text" placeholder="Freedom" maxlength="100" required th:field="*{pokemonOwnerName}">
-					<span th:if="${#fields.hasErrors('pokemonOwnerName')}" th:errors="*{pokemonOwnerName}"></span><br />
+					<span class="error-message" th:if="${#fields.hasErrors('pokemonOwnerName')}" th:errors="*{pokemonOwnerName}"></span><br />
 				</div>
 				<div class="input-field">
 					<p>URL para imagem</p>
 					<input type="url" placeholder="https://www.site.com/image.png" maxlength="100"  th:field="*{imageSrc}">
-					<span th:if="${#fields.hasErrors('imageSrc')}" th:errors="*{imageSrc}"></span><br />
+					<span class="error-message" th:if="${#fields.hasErrors('imageSrc')}" th:errors="*{imageSrc}"></span><br />
 				</div>
 				<hr>
 				<input id="submit-button" type="submit" name="submit" value="Salvar Alterações">
