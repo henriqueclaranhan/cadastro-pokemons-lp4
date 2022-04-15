@@ -41,12 +41,12 @@
 				<div class="input-field">
 					<p>Dono do pokémon</p>
 					<input type="text" placeholder="Freedom" maxlength="100" required th:field="*{pokemonOwnerName}">
-					<span th:if="${#fields.hasErrors('birthday')}" th:errors="*{pokemonOwnerName}"></span><br />
+					<span th:if="${#fields.hasErrors('pokemonOwnerName')}" th:errors="*{pokemonOwnerName}"></span><br />
 				</div>
 				<div class="input-field">
 					<p>URL para imagem</p>
 					<input type="url" placeholder="https://www.site.com/image.png" maxlength="100"  th:field="*{imageSrc}">
-					<span th:if="${#fields.hasErrors('birthday')}" th:errors="*{imageSrc}"></span><br />
+					<span th:if="${#fields.hasErrors('imageSrc')}" th:errors="*{imageSrc}"></span><br />
 				</div>
 				<hr>
 				<input id="submit-button" type="submit" name="submit" value="Salvar Alterações">
