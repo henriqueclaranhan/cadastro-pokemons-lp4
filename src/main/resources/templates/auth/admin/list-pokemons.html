@@ -12,6 +12,12 @@
 	<title>Atividade de LP4 - Pokémons</title>
 </head>
 
+<script th:inline="javascript">
+	const setAlternativePokemonImage = (pokemonImageElement) => {
+		pokemonImageElement.src = /*[[@{/assets/miscellaneous/favicon.png}]]*/ "";
+	}
+</script>
+
 <body>
 	<a href="/" th:insert="fragments/back-button :: back-button"></a>
 	<header id="page-header">
@@ -33,7 +39,7 @@
 	<section id="pokemons-list">
 		<div class="pokemon-card" th:each="pokemon : ${pokemons}">
 			<div class="profile-pic">
-				<img th:src="${pokemon.imageSrc}" alt="Foto de perfil">
+				<img th:src="${pokemon.imageSrc}" alt="Foto de perfil" onerror="setAlternativePokemonImage(this)">
 			</div>
 			<header class="card-header">
 				<div class="dropdown-menu" tabindex="-1">
